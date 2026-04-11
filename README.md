@@ -104,4 +104,14 @@ If you prefer to serve it over HTTP, use any static file server such as `npx ser
 
 This README describes the product vision and front-end prototype included in this repository. If you later add a build system, API server, or agent runtime, the setup instructions should be expanded to match that implementation.
 
-<p align="center"><b>Built for the future of work.</b></p>
+## What’s Next? 🚀
+
+- Add a proper build or deployment workflow if this moves beyond a static prototype.
+- Connect the UI to real candidate, interview, and scoring data.
+- Expand the API section with live endpoints, examples, and authentication details.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/TalentSync-Ready%20to%20scale-00f5ff?style=for-the-badge" alt="Ready to scale" />
+</p>
+
+<p align="center"><strong>Built for the future of work. Designed to feel fast, intelligent, and premium.</strong></p>
