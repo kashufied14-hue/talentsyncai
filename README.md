@@ -15,8 +15,8 @@ TalentSync AI is an autonomous recruitment concept and interactive front-end pro
 ## At a Glance 👀
 
 - 🧠 Intelligent candidate discovery and ranking
-- 🎙️ Conversational AI interview flow
-- 📊 Explainable scoring for hiring decisions
+- 🎙️ Conversational AI interview flow.
+- 📊 Explainable scoring for hiring decisions.
 - ⚡ Built to reduce recruiting bottlenecks.
 
 ## Overview
