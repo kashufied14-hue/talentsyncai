@@ -59,10 +59,6 @@ The pipeline is designed to support high-volume hiring workflows without requiri
 | Cost Efficiency | Lower the operational cost of top-of-funnel recruiting |
 | Explainability | Show why a candidate ranked high or low |
 
-## Why It Feels Better ✨
-
-The design combines a dark, high-contrast hero, clear section grouping, and a visual banner so the README reads more like a product page than a plain document.
-
 ## Tech Stack & Integrations
 
 - Core AI: multimodal LLMs and embedding models for ranking and assessment.
@@ -85,8 +81,6 @@ The API layer is intended to support programmatic workflows such as:
 - Syncing transcripts or evaluation results to external systems.
 
 ## Local Development
-
-This repository currently contains a static HTML prototype rather than a packaged application.
 
 To run it locally, use the boxed quick start below:
 
