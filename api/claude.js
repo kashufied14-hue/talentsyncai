@@ -7,17 +7,36 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
 
   try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': process.env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01'
-      },
-      body: JSON.stringify(req.body)
+    const { messages, system } = req.body;
+
+    // Build prompt from messages + system
+    let prompt = '';
+    if (system) prompt += system + '\n\n';
+    if (messages && messages.length > 0) {
+      prompt += messages[messages.length - 1].content;
+    }
+
+    const geminiRes = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: { maxOutputTokens: 1000 }
+        })
+      }
+    );
+
+    const geminiData = await geminiRes.json();
+    const text = geminiData?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+
+    // Return in Anthropic-compatible format so frontend code works unchanged
+    res.status(200).json({
+      content: [{ type: 'text', text }],
+      usage: { output_tokens: text.length }
     });
-    const data = await response.json();
-    res.status(200).json(data);
+
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
