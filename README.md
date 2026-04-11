@@ -10,14 +10,14 @@
   <img src="assets/talentsync-banner.svg" alt="TalentSync AI banner" width="100%" />
 </p>
 
-TalentSync AI is an autonomous recruitment concept and interactive front-end prototype designed to automate the heavy lifting of hiring. It frames recruiting as an agentic workflow: source candidates, assess fit, conduct interviews, and surface explainable rankings with minimal manual intervention. 🚀
+TalentSync AI is an autonomous recruitment concept and interactive front-end prototype designed to automate the heavy lifting of hiring. It frames recruiting as an agentic workflow: source candidates, assess fit, conduct interviews, and surface explainable rankings with minimal manual intervention. 🚀.
 
 ## At a Glance 👀
 
 - 🧠 Intelligent candidate discovery and ranking
 - 🎙️ Conversational AI interview flow
 - 📊 Explainable scoring for hiring decisions
-- ⚡ Built to reduce recruiting bottlenecks
+- ⚡ Built to reduce recruiting bottlenecks.
 
 ## Overview
 
