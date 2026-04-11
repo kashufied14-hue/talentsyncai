@@ -722,13 +722,15 @@ Requirements:
 // ============================================================
 // API KEY MANAGEMENT (no-op — using built-in proxy)
 // ============================================================
+// OpenRouter key — free, no credit card needed
+window.OPENROUTER_KEY = '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';
+
 function saveApiKey() {}
 function initApiKey() {
-  // Banner is already showing "connected" status; auto-hide after 4s
   setTimeout(() => {
     const banner = document.getElementById('api-key-banner');
     if (banner) banner.style.display = 'none';
-  }, 4000);
+  }, 3000);
 }
 
 // ============================================================
@@ -752,27 +754,30 @@ let chatOpen = false;
 async function callClaude(prompt, systemPrompt = '') {
   STATE.aiCalls++;
   updateSidebarStats();
-  addLog('AI', `Calling Claude claude-sonnet-4-20250514…`);
-
-  const messages = [{role:'user', content: prompt}];
-  const body = {
-    model: 'claude-sonnet-4-20250514',
-    max_tokens: 1000,
-    messages
-  };
-  if (systemPrompt) body.system = systemPrompt;
-
-  const response = await fetch('/api/claude', {
+  addLog('AI', 'Calling AI...');
+  let fullPrompt = systemPrompt ? systemPrompt + '\n\n' + prompt : prompt;
+  if (fullPrompt.length > 6000) fullPrompt = fullPrompt.slice(0, 6000);
+  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + window.OPENROUTER_KEY,
+      'HTTP-Referer': 'https://talentsyncai-indol.vercel.app',
+      'X-Title': 'TalentSync AI'
     },
-    body: JSON.stringify(body)
+    body: JSON.stringify({
+      model: 'meta-llama/llama-3.1-8b-instruct:free',
+      messages: [{ role: 'user', content: fullPrompt }],
+      max_tokens: 1000,
+      temperature: 0.2
+    })
   });
   const data = await response.json();
   if (!response.ok) throw new Error(data.error?.message || 'API error');
-  addLog('AI', `Claude responded (${data.usage?.output_tokens || '?'} tokens)`);
-  return data.content[0]?.text || '';
+  let text = data.choices?.[0]?.message?.content || '';
+  text = text.replace(/```json\n?/gi, '').replace(/```\n?/g, '').trim();
+  addLog('AI', 'AI responded (' + text.length + ' chars)');
+  return text;
 }
 
 // ============================================================
