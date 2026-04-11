@@ -1,93 +1,219 @@
-# TalentSync AI 🤖✨
+<div align="center">
 
-<p align="center">
-  <img alt="TalentSync AI Banner" src="https://img.shields.io/badge/TalentSync-AI%20Recruitment%20OS-0ea5e9?style=for-the-badge" />
-  <img alt="Status" src="https://img.shields.io/badge/Status-Prototype-success?style=for-the-badge" />
-  <img alt="License" src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
-</p>
+<img src="https://img.shields.io/badge/Tic%20Tech%20Toe%20'26-NeoCoders-00F5FF?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0tMiAxNWwtNS01IDEuNDEtMS40MUwxMCAxNC4xN2w3LjU5LTcuNTlMMTkgOGwtOSA5eiIvPjwvc3ZnPg==" />
 
-<p align="center">
-  <img src="assets/talentsync-banner.svg" alt="TalentSync AI banner" width="100%" />
-</p>
+# 🤖 TalentSync AI
 
-TalentSync AI is an autonomous recruitment concept and interactive front-end prototype designed to automate the heavy lifting of hiring. It frames recruiting as an agentic workflow: source candidates, assess fit, conduct interviews, and surface explainable rankings with minimal manual intervention. 🚀.
+### *Smarter Hiring. Faster Decisions. Zero Guesswork.*
 
-## At a Glance 👀
+**A Multi-Agent Talent Intelligence System built for Tic Tech Toe '26**  
+Problem Statement #09 · Domain: Multi-Agent AI & Talent Intelligence
 
-- 🧠 Intelligent candidate discovery and ranking.
-- 🎙️ Conversational AI interview flow.
-- 📊 Explainable scoring for hiring decisions.
-- ⚡ Built to reduce recruiting bottlenecks.
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-View%20Prototype-7C3AED?style=for-the-badge)](https://kashufied14-hue.github.io/talentsyncai/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/kashufied14-hue/talentsyncai)
+[![Status](https://img.shields.io/badge/Status-Mid%20Review%20Ready-22C55E?style=for-the-badge)]()
 
-## Overview
+</div>
 
-TalentSync AI is positioned as an operating layer for modern recruiting teams. The goal is to compress time-to-hire, improve consistency, and make candidate evaluation more transparent. 🧭
+---
 
-## Recruitment Pipeline
+## 🎯 The Problem
 
-The pipeline is designed to support high-volume hiring workflows without requiring human review until the final decision stage.
+Modern hiring is broken. Recruiters process **thousands of resumes daily** across PDFs, DOCX files, and LinkedIn exports — inconsistently and at scale. Traditional ATS systems rely on **rigid keyword matching**, meaning a candidate who wrote "ReactJS" instead of "React.js" might get filtered out entirely. Qualified talent slips through. Hiring decisions suffer.
 
-- Portal Sync: agentic scrapers and import flows collect candidate data from external portals and internal systems. 🔄
-- Neural Shortlisting: contextual analysis moves beyond keyword matching to identify high-potential candidates. 🧠
-- Multimodal Interviews: AI-driven interviews can evaluate technical depth, communication style, and soft skills. 🎥
-- Explainable Scoring: each candidate receives a transparent score backed by structured competency data. 📈
+> *"Modern hiring systems fail to understand talent effectively."*
 
-## Technical Workflow
+**Core pain points:**
+- Resume parsing is error-prone and format-dependent
+- Keyword matching misses semantic meaning and skill synonyms
+- Manual screening leads to recruiter fatigue and inconsistent evaluation
+- No transparency in why candidates rank high or low
 
-### Phase 1: Knowledge Acquisition
+---
 
-- Role Profiling: define success criteria for a role through an AI-guided conversation. 🗣️
-- Machine-Actionable Profiles: convert those criteria into evaluation signals the system can apply consistently. 🧩
+## 💡 Our Solution
 
-### Phase 2: Execution
+TalentSync AI is an **autonomous, multi-agent recruitment system** where specialized AI agents collaborate to parse, normalize, match, and rank candidates — based on *meaning*, not just keywords.
 
-- Agentic Sourcing: search across configured talent sources for matching profiles. 🎯
-- Autonomous Screening: analyze resumes and candidate data against role requirements using LLM-based reasoning. ⚡
+> *"An intelligent multi-agent system that understands talent, not just keywords."*
 
-### Phase 3: High-Fidelity Assessment
+The system compresses time-to-hire, improves consistency, and makes candidate evaluation fully transparent and explainable.
 
-- Live AI Interviews: conduct a natural conversational interview with adaptive follow-up questions. 🤝
-- Signal Extraction: score technical depth, logic flow, communication quality, and related hiring signals. 🔍
+---
 
-## Key Benefits
+## 🏗️ System Architecture
 
-| Feature | TalentSync Advantage |
-| --- | --- |
-| Zero-Latency | Reduce time-to-hire from weeks to hours |
-| Infinite Scale | Review large candidate pools without increasing headcount |
-| Bias Reduction | Base decisions on structured competency data instead of intuition |
-| Cost Efficiency | Lower the operational cost of top-of-funnel recruiting |
-| Explainability | Show why a candidate ranked high or low |
+TalentSync AI is built on a **four-agent pipeline** with a central orchestration layer:
 
-## Tech Stack & Integrations
+```
+┌─────────────────────────────────────────────────────────┐
+│                   ORCHESTRATION LAYER                   │
+│         (Coordination · Fault Tolerance · Scale)        │
+└──────────┬──────────────┬──────────────┬────────────────┘
+           │              │              │
+    ┌──────▼──────┐ ┌─────▼──────┐ ┌────▼──────────┐
+    │  Resume     │ │   Skill    │ │   Semantic    │
+    │  Parsing    │ │ Normaliz-  │ │   Matching    │
+    │  Agent      │ │ ation Agent│ │   Agent       │
+    │             │ │            │ │               │
+    │ PDF · DOCX  │ │ Taxonomy   │ │ Embeddings    │
+    │ LinkedIn    │ │ Synonyms   │ │ Similarity    │
+    └─────────────┘ └────────────┘ └───────────────┘
+           │              │              │
+    ┌──────▼──────────────▼──────────────▼────────────────┐
+    │            STRUCTURED CANDIDATE PROFILE              │
+    │      Experience · Skills · Education · Score         │
+    └─────────────────────────────────────────────────────┘
+```
 
-- Core AI: multimodal LLMs and embedding models for ranking and assessment.
-- Frontend: a modern, responsive single-page interface for recruiter workflows.
-- Integrations: ATS and HRIS hooks, plus candidate import pipelines.
-- Security: designed with enterprise controls, encryption, and compliance in mind.
+### The Four Agents
 
-## Use Cases
+| Agent | Role |
+|-------|------|
+| 🗂️ **Resume Parsing Agent** | Extracts structured data (experience, skills, education) from PDF, DOCX, and LinkedIn exports |
+| 🔗 **Skill Normalization Agent** | Maps diverse skill representations to a standard taxonomy — handles synonyms, abbreviations, and hierarchies |
+| 🧠 **Semantic Matching Agent** | Uses embedding-based similarity to evaluate candidate-job compatibility *by meaning*, not keywords |
+| ⚙️ **Orchestration Layer** | Coordinates agents, ensures fault tolerance, and manages parallel processing at scale |
 
-- Startups: compete for top-tier talent without a large recruiting team.
-- Enterprises: process large application volumes with consistent evaluation.
-- Agencies: increase placement capacity by automating the top of the funnel.
+---
 
-## API Section
+## ✨ Key Features
 
-The API layer is intended to support programmatic workflows such as:
+### 🚀 Core Capabilities
+- **Zero-Latency Shortlisting** — reduce time-to-hire from weeks to hours
+- **Infinite Scale** — process large candidate pools without increasing headcount
+- **Bias Reduction** — decisions grounded in structured competency data
+- **Explainable Scoring** — every candidate ranking comes with a transparent rationale
 
-- Triggering candidate ingestion jobs.
-- Retrieving candidate scores and interview outputs.
-- Syncing transcripts or evaluation results to external systems.
+### 🧠 Advanced Intelligence
+- **Skill Inference Engine** — identifies hidden expertise (e.g., TensorFlow experience → infers Deep Learning proficiency)
+- **Experience-Aware Matching** — factors in depth of experience, project complexity, and skill relevance
+- **Gap Analysis** — highlights missing skills and surfaces upskilling insights for candidates
+- **Dynamic Skill Normalization** — "ML Engineer" and "Machine Learning Engineer" are understood as the same thing
 
-## Local Development
+---
 
-To run it locally, use the boxed quick start below:
+## 🛠️ Tech Stack
 
-> **Clone + Open**
->
-> ```bash
-> git clone https://github.com/kashufied14-hue/talentsyncai.git
-> cd talentsyncai
-> xdg-open talentsync-ai.html
-> ```.
+| Layer | Technology |
+|-------|-----------|
+| **Backend** | Python, FastAPI |
+| **AI Framework** | LangChain / CrewAI |
+| **NLP Models** | Sentence Transformers |
+| **Database** | PostgreSQL + Vector DB (Pinecone / Chroma) |
+| **Resume Parsing** | PyMuPDF, python-docx |
+| **Frontend** | Vanilla JS, Chart.js, Space Grotesk |
+| **Deployment** | Docker |
+
+---
+
+## 📊 Performance Targets
+
+| Metric | Target |
+|--------|--------|
+| ⚡ Processing time per resume | < 10 seconds |
+| 🎯 Parsing accuracy | F1-score optimized |
+| 📈 Scalability | Bulk resume processing |
+| 🔄 Reliability | Fault-tolerant multi-agent execution |
+
+---
+
+## 🖥️ Prototype
+
+> **Note:** The current repository contains our **interactive front-end prototype** — a polished, animated UI that demonstrates the full recruiter workflow and system vision. It is built to showcase the end product; agentic backend logic is under active development.
+
+### What the prototype demonstrates:
+- Full recruiter dashboard with KPI metrics and pipeline visualisation
+- Animated candidate scoring and match-bar breakdowns
+- Resume upload flow with simulated AI parsing output
+- Multi-agent pipeline status display (Phase 1 → Phase 2 → Phase 3)
+- AI chat assistant interface (Anthropic API integration scaffolded)
+- API log viewer and job board screens
+
+### Run locally
+
+```bash
+# Clone the repository
+git clone https://github.com/kashufied14-hue/talentsyncai.git
+cd talentsyncai
+
+# Open the prototype
+xdg-open talentsync-ai.html     # Linux
+open talentsync-ai.html          # macOS
+start talentsync-ai.html         # Windows
+```
+
+No build step. No dependencies. Just open in a browser.
+
+---
+
+## 🔌 API (Planned)
+
+The API layer will expose programmatic access to the full pipeline:
+
+```http
+POST   /api/v1/parse          → Ingest and parse a resume
+POST   /api/v1/match          → Run semantic matching against a job description
+GET    /api/v1/candidates     → Retrieve ranked candidate list with scores
+GET    /api/v1/candidates/:id → Fetch individual candidate profile and explanation
+POST   /api/v1/jobs           → Create or update a job role profile
+GET    /api/v1/pipeline       → Get live pipeline status
+```
+
+Designed for integration with ATS platforms, HRIS systems, and job portals.
+
+---
+
+## 🌐 Use Cases
+
+**Startups** — compete for top-tier talent without a large recruiting team  
+**Enterprises** — process high application volumes with consistent, auditable evaluation  
+**Staffing Agencies** — automate top-of-funnel and increase placement capacity
+
+---
+
+## 🏅 Why TalentSync AI Stands Out
+
+| Feature | Traditional ATS | TalentSync AI |
+|---------|----------------|---------------|
+| Matching approach | Keyword-based | Semantic / embedding-based |
+| Skill handling | Exact match only | Normalised taxonomy + synonyms |
+| Architecture | Monolithic | Multi-agent, parallel |
+| Explainability | ❌ None | ✅ Per-candidate rationale |
+| Integration | Limited | API-first |
+| Scale | Manual bottlenecks | Autonomous pipeline |
+
+---
+
+## 👥 Team — NeoCoders
+
+| Name | Role |
+|------|------|
+| **Sakshi** | Core Developer · Multi-process Manager · Parsing Specialist |
+| **Jheel** | Backend Developer |
+| **Dhrishti** | AI / ML Engineer |
+| **Manyata** | Frontend Developer |
+| **Saurabh** | Data Engineer |
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Front-end prototype with full recruiter dashboard
+- [x] Animated pipeline and candidate scoring UI
+- [ ] Resume Parsing Agent (PyMuPDF + python-docx)
+- [ ] Skill Normalization Agent with taxonomy
+- [ ] Semantic Matching Agent (Sentence Transformers)
+- [ ] FastAPI backend with agent orchestration
+- [ ] Vector DB integration (Pinecone / Chroma)
+- [ ] Live API with ATS hooks
+
+---
+
+<div align="center">
+
+**Built with ❤️ by Team NeoCoders · Tic Tech Toe '26**
+
+*Problem Statement #09 — Multi-Agent AI & Talent Intelligence*
+
+</div>
