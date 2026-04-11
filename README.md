@@ -96,10 +96,4 @@ To run it locally, use the boxed quick start below:
 > git clone https://github.com/kashufied14-hue/talentsyncai.git
 > cd talentsyncai
 > xdg-open talentsync-ai.html
-> ```
-
-If you prefer to serve it over HTTP, use any static file server such as `npx serve` or `python3 -m http.server`.
-
-## Project Note
-
-This README describes the product vision and front-end prototype included in this repository. If you later add a build system, API server, or agent runtime, the setup instructions should be expanded to match that implementation.
+> ```.
