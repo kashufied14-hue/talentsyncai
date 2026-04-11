@@ -1,4 +1,4 @@
-# TalentSync AI
+# TalentSync AI 🤖✨
 
 <p align="center">
   <img alt="TalentSync AI Banner" src="https://img.shields.io/badge/TalentSync-AI%20Recruitment%20OS-0ea5e9?style=for-the-badge" />
@@ -6,37 +6,48 @@
   <img alt="License" src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
 </p>
 
-TalentSync AI is an autonomous recruitment concept and interactive front-end prototype designed to automate the heavy lifting of hiring. It frames recruiting as an agentic workflow: source candidates, assess fit, conduct interviews, and surface explainable rankings with minimal manual intervention.
+<p align="center">
+  <img src="assets/talentsync-banner.svg" alt="TalentSync AI banner" width="100%" />
+</p>
+
+TalentSync AI is an autonomous recruitment concept and interactive front-end prototype designed to automate the heavy lifting of hiring. It frames recruiting as an agentic workflow: source candidates, assess fit, conduct interviews, and surface explainable rankings with minimal manual intervention. 🚀
+
+## At a Glance 👀
+
+- 🧠 Intelligent candidate discovery and ranking
+- 🎙️ Conversational AI interview flow
+- 📊 Explainable scoring for hiring decisions
+- ⚡ Built to reduce recruiting bottlenecks
 
 ## Overview
 
-TalentSync AI is positioned as an operating layer for modern recruiting teams. The goal is to compress time-to-hire, improve consistency, and make candidate evaluation more transparent.
+TalentSync AI is positioned as an operating layer for modern recruiting teams. The goal is to compress time-to-hire, improve consistency, and make candidate evaluation more transparent. 🧭
 
 ## Recruitment Pipeline
 
 The pipeline is designed to support high-volume hiring workflows without requiring human review until the final decision stage.
 
-- Portal Sync: agentic scrapers and import flows collect candidate data from external portals and internal systems.
-- Neural Shortlisting: contextual analysis moves beyond keyword matching to identify high-potential candidates.
-- Multimodal Interviews: AI-driven interviews can evaluate technical depth, communication style, and soft skills.
-- Explainable Scoring: each candidate receives a transparent score backed by structured competency data.
+- Portal Sync: agentic scrapers and import flows collect candidate data from external portals and internal systems. 🔄
+- Neural Shortlisting: contextual analysis moves beyond keyword matching to identify high-potential candidates. 🧠
+- Multimodal Interviews: AI-driven interviews can evaluate technical depth, communication style, and soft skills. 🎥
+- Explainable Scoring: each candidate receives a transparent score backed by structured competency data. 📈
 
 ## Technical Workflow
 
 ### Phase 1: Knowledge Acquisition
 
-- Role Profiling: define success criteria for a role through an AI-guided conversation.
-- Machine-Actionable Profiles: convert those criteria into evaluation signals the system can apply consistently.
+- Role Profiling: define success criteria for a role through an AI-guided conversation. 🗣️
+- Machine-Actionable Profiles: convert those criteria into evaluation signals the system can apply consistently. 🧩
 
 ### Phase 2: Execution
 
-- Agentic Sourcing: search across configured talent sources for matching profiles.
-- Autonomous Screening: analyze resumes and candidate data against role requirements using LLM-based reasoning.
+- Agentic Sourcing: search across configured talent sources for matching profiles. 🎯
+- Autonomous Screening: analyze resumes and candidate data against role requirements using LLM-based reasoning. ⚡
 
 ### Phase 3: High-Fidelity Assessment
 
-- Live AI Interviews: conduct a natural conversational interview with adaptive follow-up questions.
-- Signal Extraction: score technical depth, logic flow, communication quality, and related hiring signals.
+- Live AI Interviews: conduct a natural conversational interview with adaptive follow-up questions. 🤝
+- Signal Extraction: score technical depth, logic flow, communication quality, and related hiring signals. 🔍
 
 ## Key Benefits
 
@@ -47,6 +58,10 @@ The pipeline is designed to support high-volume hiring workflows without requiri
 | Bias Reduction | Base decisions on structured competency data instead of intuition |
 | Cost Efficiency | Lower the operational cost of top-of-funnel recruiting |
 | Explainability | Show why a candidate ranked high or low |
+
+## Why It Feels Better ✨
+
+The design combines a dark, high-contrast hero, clear section grouping, and a visual banner so the README reads more like a product page than a plain document.
 
 ## Tech Stack & Integrations
 
@@ -73,13 +88,15 @@ The API layer is intended to support programmatic workflows such as:
 
 This repository currently contains a static HTML prototype rather than a packaged application.
 
-To run it locally:
+To run it locally, use the boxed quick start below:
 
-```bash
-git clone https://github.com/your-repo/talentsync-ai.git
-cd talentsync-ai
-xdg-open talentsync-ai.html
-```
+> **Clone + Open**
+>
+> ```bash
+> git clone https://github.com/kashufied14-hue/talentsyncai.git
+> cd talentsyncai
+> xdg-open talentsync-ai.html
+> ```
 
 If you prefer to serve it over HTTP, use any static file server such as `npx serve` or `python3 -m http.server`.
 
