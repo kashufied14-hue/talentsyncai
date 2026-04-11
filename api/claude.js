@@ -16,6 +16,12 @@ export default async function handler(req, res) {
       prompt += messages[messages.length - 1].content;
     }
 
+    // Tell Gemini to respond ONLY with JSON when the prompt contains "JSON"
+    const isJsonRequest = prompt.includes('JSON') || prompt.includes('json');
+    if (isJsonRequest) {
+      prompt += '\n\nIMPORTANT: Respond with ONLY valid JSON. No markdown, no backticks, no explanation. Start your response directly with { or [';
+    }
+
     const geminiRes = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
@@ -23,15 +29,26 @@ export default async function handler(req, res) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: { maxOutputTokens: 1000 }
+          generationConfig: { 
+            maxOutputTokens: 1000,
+            temperature: 0.3
+          }
         })
       }
     );
 
     const geminiData = await geminiRes.json();
-    const text = geminiData?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    
+    if (!geminiRes.ok) {
+      return res.status(500).json({ error: geminiData?.error?.message || 'Gemini API error' });
+    }
 
-    // Return in Anthropic-compatible format so frontend code works unchanged
+    let text = geminiData?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    
+    // Strip any markdown code fences if present
+    text = text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+
+    // Return in Anthropic-compatible format so frontend works unchanged
     res.status(200).json({
       content: [{ type: 'text', text }],
       usage: { output_tokens: text.length }
