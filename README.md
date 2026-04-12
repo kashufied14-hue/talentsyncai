@@ -24,8 +24,8 @@ Modern hiring is broken. Recruiters process **thousands of resumes daily** acros
 > *"Modern hiring systems fail to understand talent effectively."*
 
 **Core pain points:**
-- Resume parsing is error-prone and format-dependent
-- Keyword matching misses semantic meaning and skill synonyms
+- Resume parsing is error-prone and format-dependent.
+- Keyword matching misses semantic meaning and skill synonyms.
 - Manual screening leads to recruiter fatigue and inconsistent evaluation
 - No transparency in why candidates rank high or low
 
