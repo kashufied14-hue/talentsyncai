@@ -217,3 +217,6 @@ Designed for integration with ATS platforms, HRIS systems, and job portals.
 *Problem Statement #09 — Multi-Agent AI & Talent Intelligence*
 
 </div>
+
+
+THiS IS JUST A NorMAL SINglE PaGE So, I BUILD ANOTHER PRoJECT FOR THis.
